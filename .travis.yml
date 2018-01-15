@@ -13,7 +13,7 @@ deploy:
   bucket: dl.velimir.me.uk
   region: eu-west-2
   local-dir: artifacts
-  upload-dir: cv
+  upload-dir: resume
   skip_cleanup: true
   on:
     repo: velimir0xff/resume
