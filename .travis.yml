@@ -3,7 +3,7 @@ services:
 - docker
 script:
 - docker run --rm -w "/doc" -v "$PWD":/doc thomasweise/texlive make
-- mkdir artifacts && mv src/*.pdf artifacts/
+- mkdir -p artifacts/$TRAVIS_BRANCH && mv src/*.pdf artifacts/$TRAVIS_BRANCH
 
 deploy:
   provider: s3
@@ -13,5 +13,7 @@ deploy:
   bucket: velimir.me.uk
   local-dir: artifacts
   upload-dir: cv
+  skip_cleanup: true
   on:
     repo: velimir0xff/resume
+    all_branches: true
