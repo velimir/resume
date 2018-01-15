@@ -11,6 +11,7 @@ deploy:
   secret_access_key:
     secure: L8uKLakAkgf7iCcj+xIrjzfgVd7BoscDqXHv3iB2DuyWSIgL1BYao720/6dsULX3dT1TrisoN8xMydmghH7LeA+O15oz1jZXx/DQBHJwbyHdK33TRnpcSYybopOIkyoeicqrPJEYFvV/0JzMT0gRiV5VIEX5LZ1mo6R65mh816Z7TlSBLrhQZnTKZojwV/hXAUyVYmE1+aZ8AYbNb5KoWZUjBrFmVmtEuVM7jP4YLoAnfSjntQnpOretj/dyJy/5OqHT7yaoFQDn6obXM+7H7e9HODDUtAxyqWXTGr8YO2Pce4XUJXJwopL6JwKiIC+Ae9NFHpBKQ8drXrDC5gUJMrKFf4wq+Kry6Pu/JlfWP8ozm/Iqv7mzx4Zgh2P6yKcq5i+MS05FHgFkur7dMk0NqrZYpGMEkJr0ddFgF5G3c8tfpj/5zB3VLjpvGBkP+RPctuVa/4UIALqHh6IQHbyjATgUG8QNSWbc6OSEymF8Mzz6I706sFqswBDxkBJzDyjYT9CEakcZM3+mix/nIjzH11Mw4p7j/kXmR0uTQiTht24KFgAUa7TpR/pCQjzRXxAxxEXqKlIBAtsxCRlQYVQc8MkMzUhs3lNPBjcLW0NZgJTwrb9xvmnWUQOKWDvWMjXKTldD8WtVDEExO4y5dW4ta/ZpkorLN2WlAnmz6i79v3w=
   bucket: velimir.me.uk
+  region: eu-west-1
   local-dir: artifacts
   upload-dir: cv
   skip_cleanup: true
