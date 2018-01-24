@@ -222,6 +222,11 @@
 \newcommand*{\honordatestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\color{graytext} #1}}
 \newcommand*{\honorlocationstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\slshape\color{awesome} #1}}
 
+% For elements of qualification
+\newcommand*{\qualificationtitlestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\color{graytext} #1}}
+\newcommand*{\qualificationdatestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\color{graytext} #1}}
+\newcommand*{\qualificationlocationstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\slshape\color{awesome} #1}}
+
 % For elements of skill
 \newcommand*{\skilltypestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
 \newcommand*{\skillsetstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\color{text} #1}}
@@ -320,6 +325,10 @@
 % Defines writer's xing (optional)
 % Usage: \xing{<xing name>}
 \newcommand*{\xing}[1]{\def\@xing{#1}}
+
+% Defines writer's instagram (optional)
+% Usage: \instagram{<github-nick>}
+\newcommand*{\instagram}[1]{\def\@instagram{#1}}
 
 % Defines writer's twitter (optional)
 % Defines writer's extra informations (optional)
@@ -505,6 +514,12 @@
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
           \href{https://www.xing.com/profile/\@xing}{\faXingSquare\acvHeaderIconSep\@xing}
         }%
+      \ifthenelse{\isundefined{\@instagram}}%
+        {}%
+        {%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
+          \href{https://www.instagram.com/\@instagram}{\faInstagram\acvHeaderIconSep\@instagram}%
+        }%
       \ifthenelse{\isundefined{\@extrainfo}}%
         {}%
         {%
@@ -638,6 +653,12 @@
 % Usage: \cvhonor{<position>}{<title>}{<location>}{<date>}
 \newcommand*{\cvhonor}[4]{%
   \honordatestyle{#4} & \honorpositionstyle{#1}, \honortitlestyle{#2} & \honorlocationstyle{#3} \\
+}
+
+% Define a line of cv information(honor, award or something else)
+% Usage: \cvqualification{<title>}{<location>}{<date>}
+\newcommand*{\cvqualification}[3]{%
+  \qualificationdatestyle{#3} & \qualificationtitlestyle{#1} & \qualificationlocationstyle{#2} \\
 }
 
 % Define an environment for cvskill
