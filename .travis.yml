@@ -16,5 +16,5 @@ deploy:
   upload-dir: resume
   skip_cleanup: true
   on:
-    repo: velimir0xff/resume
+    repo: velimir/resume
     all_branches: true
