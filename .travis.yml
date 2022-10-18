@@ -2,7 +2,7 @@ sudo: required
 services:
 - docker
 script:
-- docker run --rm -v "$PWD":/doc/  -v "$PWD"/fonts/:/usr/share/fonts/external/ thomasweise/texlive make
+- docker run --rm -v "$PWD":/doc/  -v "$PWD"/fonts/:/usr/share/fonts/external/ thomasweise/texlive:1.0.0 make
 - mkdir -p artifacts/$TRAVIS_BRANCH && mv src/*.pdf artifacts/$TRAVIS_BRANCH
 
 deploy:
